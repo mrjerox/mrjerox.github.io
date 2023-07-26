@@ -1,0 +1,188 @@
+// Variable
+$prata: 'Prata', serif
+$primaryColor: #0B3662
+$primaryColor2: #00815F
+$secondaryColor: #05182C
+
+// Fix
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap')
+
+@font-face
+    font-family: "SVN-Gotham"
+    src: url('assets/fonts/SVN-GothamBold.otf') format(opentype)
+    font-weight: 700
+
+@font-face
+    font-family: "SVN-Gotham"
+    src: url('assets/fonts/SVN-GothamRegular.otf') format(opentype)
+    font-weight: 400
+
+@font-face
+    font-family: "SVN-Gotham"
+    src: url('assets/fonts/SVN-GothamLight.otf') format(opentype)
+    font-weight: 300
+
+*
+    box-sizing: border-box
+
+html,body
+    padding: 0
+    margin: 0
+
+body
+    font-family: "SVN-Gotham", sans-serif
+    font-weight: 300
+    font-size: 16px
+    color: $secondaryColor
+
+h1,h2,h3,h4,h5,h6
+    margin: 0
+    padding: 0
+
+img
+    max-width: 100%
+    height: auto
+
+// General
+.container
+    max-width: 650px
+    margin: 0 auto
+
+.box-head
+    padding-top: 24px
+    padding-bottom: 32px
+    text-align: center
+
+    .box-button
+        margin-top: 24px
+
+    .title
+        font-family: $prata
+        color: $primaryColor
+        text-align: center
+        font-size: 24px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        @media (max-width: 767px)
+            font-size: 20px
+
+    > span
+        display: inline-block
+        font-family: SVN-Gotham
+        font-size: 16px
+        font-style: normal
+        line-height: 1.75em
+        margin-top: 4px
+        @media (max-width: 767px)
+            font-size: 12px
+
+.box-logo
+    img
+        width: 418px
+        display: block
+        margin: 0 auto
+        @media (max-width: 767px)
+            width: 199px
+
+.btn-main
+    padding: .8em 2em .9em 2em
+    display: inline-block
+    cursor: pointer
+    border-radius: 9999px
+    background-color: $primaryColor2
+    text-decoration: none
+
+    &.--user
+        span
+            position: relative
+            padding-left: 25px
+            @media (max-width: 767px)
+                padding-left: 20px
+
+            &:before
+                content: ''
+                position: absolute
+                left: 0
+                top: 0
+                width: 16px
+                height: 16px
+                background-image: url('assets/images/Signup.svg')
+                background-size: contain
+                background-repeat: no-repeat
+                background-position: center
+                @media (max-width: 767px)
+                    width: 14px
+                    height: 14px
+
+    span
+        display: block
+        color: #fff
+        leading-trim: both
+        text-edge: cap
+        font-size: 16px
+        font-style: normal
+        font-weight: 400
+        line-height: 1em
+        @media (max-width: 767px)
+            font-size: 14px
+
+// Section
+.section
+    padding-top: 120px
+    padding-bottom: 260px
+    background: linear-gradient(0deg, rgba(252, 240, 211, 0.50) 0%, rgba(255, 254, 250, 0.50) 100%)
+
+.info-list
+    ul
+        list-style: none
+
+    li
+        display: flex
+        align-items: flex-start
+        padding-bottom: 16px
+        margin-bottom: 16px
+        border-bottom: 1px solid rgba($primaryColor, .1)
+
+        &:last-child
+            padding-bottom: 0
+            margin-bottom: 0
+            border: 0
+
+    .icon
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        flex: 0 0 40px
+        height: 40px
+        border-radius: 50%
+        background-color: #fff
+        filter: drop-shadow(-1px 3px 14px rgba(71, 70, 70, 0.25))
+        @media (max-width: 767px) 
+            flex-basis: 32px
+            height: 32px
+
+        img
+            max-width: 16px
+            @media (max-width: 767px) 
+                max-width: 10px
+
+    .content
+        padding-left: 15px
+        @media (max-width: 767px) 
+            padding-left: 8px
+
+    strong
+        font-weight: 400
+        color: $primaryColor
+        display: block
+        margin-bottom: 8px
+
+    span
+        display: block
+        font-size: 16px
+        font-style: normal
+        font-weight: 300
+        line-height: 1.75em
+        @media (max-width: 767px) 
+            font-size: 14px
